@@ -1,11 +1,11 @@
 const CACHE_NAME = 'bejeweled-v1';
 const ASSETS = [
   '/',
-  'index.html',
-  'style.css',
-  'game.js',
-  'manifest.json',
-  'icon.svg',
+  '/index.html',
+  '/style.css',
+  '/game.js',
+  '/manifest.json',
+  '/icon.svg',
 ];
 
 self.addEventListener('install', (evt) => {
@@ -24,6 +24,6 @@ self.addEventListener('activate', (evt) => {
 
 self.addEventListener('fetch', (evt) => {
   evt.respondWith(
-    caches.match(evt.request).then((res) => res || fetch(evt.request).catch(() => caches.match('index.html')))
+    caches.match(evt.request).then((res) => res || fetch(evt.request).catch(() => caches.match('/')))
   );
 });
