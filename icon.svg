@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#1a1a2e"/>
+  <rect x="4" y="4" width="504" height="504" rx="92" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"/>
+  <rect x="100" y="100" width="70" height="70" rx="16" fill="#e74c3c">
+    <animate attributeName="y" values="100;110;100" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="235" cy="135" r="35" fill="#3498db"/>
+  <polygon points="370,100 410,170 330,170" fill="#2ecc71"/>
+  <rect x="100" y="221" width="70" height="70" rx="16" fill="#f1c40f"/>
+  <circle cx="235" cy="256" r="35" fill="#9b59b6">
+    <animate attributeName="r" values="35;40;35" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <polygon points="370,221 410,291 330,291" fill="#e67e22"/>
+  <rect x="100" y="342" width="70" height="70" rx="16" fill="#1abc9c"/>
+  <circle cx="235" cy="377" r="35" fill="#e74c3c"/>
+  <polygon points="370,342 410,412 330,412" fill="#f1c40f">
+    <animate attributeName="y" values="342;352;342" dur="2s" repeatCount="indefinite"/>
+  </polygon>
+</svg>

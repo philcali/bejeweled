@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a1a2e">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <title>Bejeweled</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="start-screen" class="screen active">
+    <h1 class="title">Bejeweled</h1>
+    <p class="subtitle">Match 3 or more jewels to reach the target score!</p>
+    <button id="play-btn" class="btn btn-primary">Play</button>
+  </div>
+
+  <div id="game-screen" class="screen">
+    <div class="hud">
+      <div class="hud-item">
+        <span class="hud-label">Score</span>
+        <span id="score" class="hud-value">0</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">Target</span>
+        <span id="target" class="hud-value">5000</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">Combo</span>
+        <span id="combo" class="hud-value">0</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">Time</span>
+        <span id="timer" class="hud-value">5:00</span>
+      </div>
+    </div>
+    <div id="board" class="board"></div>
+  </div>
+
+  <div id="end-screen" class="screen">
+    <h1 id="end-title" class="title">Victory!</h1>
+    <p id="end-message" class="subtitle">You reached the target score!</p>
+    <p id="end-score" class="final-score">Score: 0</p>
+    <button id="restart-btn" class="btn btn-primary">Play Again</button>
+  </div>
+
+  <script src="game.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
